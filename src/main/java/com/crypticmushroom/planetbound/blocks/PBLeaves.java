@@ -142,7 +142,15 @@ public class PBLeaves extends BlockLeaves implements PBBlockTinted
 
     @Override
     @SideOnly(Side.CLIENT)
-    public BlockRenderLayer getBlockLayer() {
+    public BlockRenderLayer getBlockLayer()
+    {
         return Blocks.LEAVES.getBlockLayer();
+    }
+
+    @Override
+    @Deprecated
+    public boolean isOpaqueCube(IBlockState state)
+    {
+        return Blocks.LEAVES.isOpaqueCube(state);
     }
 }
